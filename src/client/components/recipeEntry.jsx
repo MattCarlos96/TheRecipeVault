@@ -1,11 +1,13 @@
 import React from 'react';
 
 const recipeEntry = (props) => {
+  //for (var ingredient of props.current.)
 
   return (
     <div className="entry">
-      <h3>{props.current.title}</h3>
-      <img className="entryImage" src={props.current.image} width="220px" height="180px"/>
+      <h2 className="title" >{props.current.title}</h2>
+      <p className="info"></p>
+      <img className="entryImage" src={props.current.image} width="240px" height="225px"/>
 
     </div>
   )
