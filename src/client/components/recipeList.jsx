@@ -18,19 +18,6 @@ class RecipeList extends React.Component {
     addToMyRecipes(recipe);
   }
 
-
-  onSearchChange() {
-    debugger;
-    let searchTerm = document.getElementById('search').value;
-    this.setState({
-      query: searchTerm
-    })
-  }
-
-  onSearchHandler(event) {
-    event.preventDefault();
-  }
-
   render() {
     if (!this.props.recipes) {
       return (

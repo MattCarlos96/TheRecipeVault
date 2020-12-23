@@ -1,6 +1,6 @@
 import React from 'react';
 import Rodal from 'rodal';
-//import 'rodal/lib/rodal.css';
+
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -37,8 +37,8 @@ class Navbar extends React.Component {
 
       </div>
       <div >
-        <form onSubmit={this.props.onSearch}>
-          <input id="search" type="text" placeholder="Search Recipes"></input>
+        <form onSubmit={this.props.preventDefault}>
+          <input onChange={this.props.search} id="search" type="text" placeholder="Search Recipes"></input>
           <input type="submit" name="search" value="Go"/>
         </form>
         <Rodal height={600} width={700} visible={this.state.visible} onClose={this.hide.bind(this)}>

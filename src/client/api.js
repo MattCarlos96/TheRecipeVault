@@ -1,8 +1,16 @@
 import API_KEY from './../../.apikey.js'
 
-
+const searchUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=`;
 const searchApi = (query) => {
-  let queryUrl = '';
+  let url2 = '&addRecipeInformation=true&fillIngredients=true'
+  let newQuery = searchUrl + query + url2;
+
+  return fetch(newQuery)
+    .then(response => response.json())
+    .then(results => {
+      console.log(results);
+      return results.results;
+    })
 
 };
 
@@ -21,7 +29,7 @@ const searchApi = (query) => {
     .then(results => {
 
       console.log(results);
-      return results;
+      return results.recipes;
     })
 };
 
