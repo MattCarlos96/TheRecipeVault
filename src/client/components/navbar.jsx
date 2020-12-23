@@ -38,8 +38,8 @@ class Navbar extends React.Component {
       </div>
       <div >
         <form onSubmit={this.props.preventDefault}>
-          <input onChange={this.props.search} id="search" type="text" placeholder="Search Recipes"></input>
-          <input type="submit" name="search" value="Go"/>
+          <input autoComplete="off" onChange={this.props.search} id="search" type="text" placeholder="Search Recipes"></input>
+          <input  type="submit" name="search" value="Go"/>
         </form>
         <Rodal height={600} width={700} visible={this.state.visible} onClose={this.hide.bind(this)}>
           <div>
