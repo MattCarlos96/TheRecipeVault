@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/navbar.jsx';
-import getRandomRecipes from './api.js';
+import {getRandomRecipes} from './api.js';
 import RecipeList from './components/recipeList.jsx'
 
 
@@ -13,6 +13,8 @@ class App extends React.Component {
       allRecipes: []
     }
   }
+
+
 
   componentDidMount() {
     debugger;

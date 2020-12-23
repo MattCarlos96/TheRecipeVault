@@ -6,6 +6,12 @@ const searchApi = (query) => {
 
 };
 
+
+ const addToMyRecipes = (recipe) => {
+   var recipeTitle = recipe.title;
+  console.log(`${recipeTitle} has been added to my recipes.`)
+}
+
 //gets 10 random recipes to display on init
  const getRandomRecipes = () => {
   let randomUrl =  `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=10`;
@@ -19,5 +25,7 @@ const searchApi = (query) => {
     })
 };
 
-export default getRandomRecipes;
+export {searchApi , addToMyRecipes, getRandomRecipes};
+
+
 
